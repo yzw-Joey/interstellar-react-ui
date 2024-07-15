@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build:es": "npx tsc -p tsconfig.build.json --module ESNext --outDir dist/esm",
+    "build:es-test": "node scripts/compileLib.js",
     "build:cjs": "npx tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs",
     "build:scss": "bash ./scripts/compileScss.sh",
     "build:umd": "npx webpack"
@@ -38,6 +39,9 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "gulp": "4.0.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "merge2": "^1.4.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
