@@ -5,7 +5,7 @@
     "dev": "vite",
     "build:es": "npx tsc -p tsconfig.build.json --module ESNext --outDir dist/esm",
     "build:cjs": "npx tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs",
-    "build:sass": "bash ./scripts/compileSass.sh",
+    "build:scss": "bash ./scripts/compileScss.sh",
     "build:umd": "npx webpack"
   },
   "main": "dist/cjs/index.js",
