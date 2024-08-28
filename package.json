@@ -1,17 +1,18 @@
 {
   "name": "interstellar-react-ui",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "scripts": {
     "dev": "vite",
     "build:lib": "node scripts/compileLib.js",
     "build:umd": "npx webpack"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
-  "unpkg": "./dist/umd/interstellar-react-ui.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/es/index.js",
+  "types": "lib/es/index.d.ts",
+  "unpkg": "dist/umd/interstellar-react-ui.js",
   "files": [
     "dist",
+    "lib",
     "package.json",
     "README.md"
   ],
