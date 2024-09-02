@@ -1,10 +1,10 @@
-import dayjs, { Dayjs } from 'dayjs';
-import MonthCalendar from './MonthCalendar';
-import './index.scss';
-import Header from './Header';
-import React, { CSSProperties, ReactNode, useState } from 'react';
-import cs from 'classnames';
-import LocaleContext from './LocaleContext';
+import dayjs, { Dayjs } from "dayjs";
+import MonthCalendar from "./MonthCalendar";
+import "./index.scss";
+import Header from "./Header";
+import React, { CSSProperties, ReactNode, useState } from "react";
+import cs from "classnames";
+import LocaleContext from "./LocaleContext";
 
 export interface CalendarProps {
   value: Dayjs;
@@ -20,13 +20,19 @@ export interface CalendarProps {
 }
 
 function Calendar(props: CalendarProps) {
-  const { value, style, className, locale, onChange } = props;
+  const {
+    value,
+    style,
+    className,
+    locale = navigator.language,
+    onChange,
+  } = props;
 
   const [curValue, setCurValue] = useState<Dayjs>(value);
 
   const [curMonth, setCurMonth] = useState<Dayjs>(value);
 
-  const classNames = cs('calendar', className);
+  const classNames = cs("calendar", className);
 
   function selectHandler(date: Dayjs) {
     setCurValue(date);
@@ -35,11 +41,11 @@ function Calendar(props: CalendarProps) {
   }
 
   function prevMonthHandler() {
-    setCurMonth(curMonth.subtract(1, 'month'));
+    setCurMonth(curMonth.subtract(1, "month"));
   }
 
   function nextMonthHandler() {
-    setCurMonth(curMonth.add(1, 'month'));
+    setCurMonth(curMonth.add(1, "month"));
   }
 
   function todayHandler() {

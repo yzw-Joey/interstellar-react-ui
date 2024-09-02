@@ -4,7 +4,8 @@ import { CalendarType } from "./interface";
 
 const allLocales: Record<string, CalendarType>= {
     'zh-CN': zhCN,
-    'en-US': enUS
+    'en-US': enUS,
+    'en': enUS
 }
 
 export default allLocales;
