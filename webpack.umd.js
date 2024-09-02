@@ -1,4 +1,3 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 /**
@@ -9,12 +8,13 @@ module.exports = {
   mode: "development",
   devtool: "source-map",
   entry: {
-    index: ["./main.tsx"],
+    index: ["./src/index.ts"],
   },
   output: {
-    filename: "main.js",
-    path: path.join(__dirname, "dev"),
-    clean: true,
+    filename: "interstellar-react-ui.js",
+    path: path.join(__dirname, "dist/umd"),
+    library: "Interstellar",
+    libraryTarget: "umd",
   },
   module: {
     rules: [
@@ -31,19 +31,12 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./index.html",
-      filename: "index.html",
-      inject: "body",
-    }),
-  ],
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
   },
-
-  devServer: {
-    hot: true,
-    static: "dev",
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+    dayjs: "dayjs",
   },
 };
