@@ -14,8 +14,8 @@
     "noImplicitAny": false,
     "jsx": "react",
     "paths": {
-      "@douyinfe/semi-foundation/*": [
-        "../semi-foundation/*"
+      "@/*": [
+        "src/*"
       ]
     },
     "forceConsistentCasingInFileNames": true,
@@ -25,7 +25,7 @@
     "noImplicitThis": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "declaration": true,
+    "declaration": false,
     "strictNullChecks": false,
     "strict": true
   },
@@ -35,6 +35,6 @@
   ],
   "exclude": [
     "node_modules",
-    "packages/rollup-plugin-semi-svg"
+    "src/CalendarTest"
   ]
 }

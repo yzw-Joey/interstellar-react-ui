@@ -3,6 +3,7 @@
   "version": "0.0.7",
   "scripts": {
     "dev": "webpack-dev-server --open",
+    "prebuild": "node scripts/prebuild.js",
     "build:lib": "node scripts/compileLib.js",
     "build:umd": "npx webpack --config ./webpack.umd.js"
   },
@@ -21,13 +22,16 @@
     "react-dom": "^18.3.1"
   },
   "dependencies": {
+    "@babel/preset-typescript": "^7.26.0",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.11",
     "lodash-es": "^4.17.21",
+    "react-intl": "^7.0.4",
     "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@babel/core": "^7.24.9",
+    "@babel/helper-plugin-utils": "^7.25.9",
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
     "@types/lodash-es": "^4.17.12",
